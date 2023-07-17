@@ -1,0 +1,495 @@
+@charset "ISO-8859-1";
+
+body{
+	background-image: url(../images/prism.png);
+	padding: 3%;
+}
+
+.deuda{
+	color: red;
+}
+
+.puntuacion{
+	display:flex;
+	padding: 5px;
+}
+
+.puntuacion h1{
+	font-family: 'Tektur', cursive;
+	color: #ffd300;
+	margin: 5px 0px 0px 0px;
+}
+
+.oro{
+	width: 230px;
+	height: 50px;
+	align-items: center;
+	text-align: center;
+	background-color: #e0e0e0;
+	margin: 0px 0px 0px 50px;
+	border-radius: 15px;
+	border-style: inset;
+	border-color: #999966;
+}
+.oro h1{
+	text-align: center;
+	margin: 2px 0px 0px 0px;
+}
+.oro img{
+	margin: 0px 0px -6px 5px;
+	width: 40px;
+	height: 40px;
+}
+
+.draw-border {
+  box-shadow: inset 0 0 0 4px #58afd1;
+  color: #58afd1;
+  -webkit-transition: color 0.25s 0.0833333333s;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
+  color: #ffe593;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: #ffe593;
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.draw-border:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+          transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+          transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 0.7rem 'Tektur', cursive;
+  padding: 0em 0em;
+  letter-spacing: 0.05rem;
+  margin: 8px 0px 0px 100px;
+  height: 40px;
+  width:  130px;
+}
+.btn:focus {
+  outline: 2px dotted #55d7dc;
+}
+
+.principal{
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+	width: 90%;
+	background-color: rgb(169, 169, 169);
+	justify-content: space-evenly;
+	
+	border-radius: 10px;
+	border-style: groove;
+	border-color: #ffe593;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.actividades{
+	margin: 10px;
+	width: 400px;
+	height: 200px;
+	text-align: center;
+	font-family: 'Lilita One', cursive;
+	border-radius: 5px;
+	
+}
+
+.granja{
+	background-color: rgb(66, 154, 33);
+	display: flex;
+	flex-flow: column wrap;
+	align-content: space-around;
+	border-style: ridge;
+	border-color: rgb(41, 122, 11);
+	
+}
+
+.granja h2{
+	color: rgb(211, 198, 71);
+	font-weight: bold;
+	letter-spacing: 1mm;
+}
+
+.granja p{
+	color: #1D4100;
+	margin: 30px 0px 0px 0px;
+}
+
+.orocolor{
+	color:  #ffd300;
+}
+.perder{
+	color: #CC0A00;
+}
+.granja button {
+  color: #1D4100;
+  background: rgb(211, 198, 71);
+  border: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-family: "Lato";
+  margin-top: 55px;
+  height: 30px;
+  width: 120px;
+   border-radius: 8px;
+  }
+
+.granja button:hover {
+  background: transparent;
+  color: white;
+}
+ .granja button:hover:before,.granja button:hover:after {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+
+.granja button:before, .granja button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 0px;
+  height: 3px;
+  background: rgb(66, 154, 33);
+  transition: all 0.4s ease;
+}
+
+.granja button:after {
+  top: inherit;
+  left: inherit;
+  bottom: 0;
+  right: 0;
+}
+
+.cueva{
+	background-color: #055A5A;
+	display: flex;
+	flex-flow: column wrap;
+	align-content: space-around;
+	border-style: ridge;
+	border-color: #018D8D;
+}
+
+.cueva h2{
+	color: #002525;
+	letter-spacing: 1mm;
+	font-weight: bold;
+}
+.cueva p{
+	color: #018D8D;
+	    margin: 30px 0px 0px 0px;
+}
+.cueva button {
+  color: #018D8D;
+  background: #002525;
+  border: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-family: "Lato";
+  margin-top: 55px;
+  height: 30px;
+  width: 120px;
+   border-radius: 8px;
+  }
+
+.cueva button:hover {
+  background: transparent;
+  color: #018D8D;
+}
+ .cueva button:hover:before,.cueva button:hover:after {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+
+.cueva button:before, .cueva button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 0px;
+  height: 3px;
+  background: #018D8D;
+  transition: all 0.2s ease;
+}
+
+.cueva button:after {
+  top: inherit;
+  left: inherit;
+  bottom: 0;
+  right: 0;
+}
+
+.casa {
+	background-color: #DB5901;
+	display: flex;
+	flex-flow: column wrap;
+	align-content: space-around;
+	border-style: ridge;
+	border-color: #803200;
+}
+
+.casa h2{
+	color: #550000;
+	letter-spacing: 1mm;
+	font-weight: bold;
+}
+
+.casa p{
+	color: #550000;
+	margin: 30px 0px 0px 0px;
+}
+
+.casa button {
+  color: #FFAAAA;
+  background: #550000;
+  border: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-family: "Lato";
+  margin-top: 55px;
+  height: 30px;
+  width: 120px;
+   border-radius: 8px;
+  }
+
+.casa button:hover {
+  background: transparent;
+  color: #550000;
+}
+ .casa button:hover:before,.casa button:hover:after {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+
+.casa button:before, .casa button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 0px;
+  height: 3px;
+  background: #DB5901;
+  transition: all 0.2s ease;
+}
+
+.casa button:after {
+  top: inherit;
+  left: inherit;
+  bottom: 0;
+  right: 0;
+}
+
+.casino{
+	display: flex;
+	flex-flow: column wrap;
+	align-content: space-around;
+	border-style: ridge;
+	border-color: #ffd300;
+	background: linear-gradient(-60deg, #ee7752, #9F06FA, #CC7A00, #FF9200);
+	background-size: 400% 400%;
+	-webkit-animation: gradient 10s ease infinite;
+	        animation: gradient 10s ease infinite;
+}
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.casino h2{
+	color: #ffd300;
+	letter-spacing: 1mm;
+	font-weight: bold;
+}
+
+.casino p{
+	color: #FFC760;
+	margin: 30px 0px 0px 0px;
+}
+
+.rainbow{
+  background-color: #343A40;
+  border-radius: 4px;  
+  color: #FFC760;
+  cursor: pointer;
+  padding: 5px 0px;
+  height: 30px;
+    width: 120px;
+    margin-top: 55px;
+
+  
+}
+.rainbow-1:hover{
+   background-image: linear-gradient(90deg, #B50015 0%, #050001 49%, #BD0500 80%, #BD5900 100%);
+   animation:slidebg 10s linear infinite;
+}
+.rainbow:hover:before,.rainbow:hover:after {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+.rainbow:before, .rainbow:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 0px;
+  height: 3px;
+  background: #FFC760;
+  transition: all 0.2s ease;
+}
+.rainbow:after {
+  top: inherit;
+  left: inherit;
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
+
+.spa{
+	background-color: #79745C;
+	display: flex;
+	flex-flow: column wrap;
+	align-content: space-around;
+	border-style: ridge;
+}
+.spa h2{
+	color: #C7C2AE;
+	letter-spacing: 1mm;
+	font-weight: bold;
+}
+.spa p{
+	color: #32260F;
+	margin: 30px 0px 0px 0px;
+}
+
+.spa button {
+  color: #32260F;
+  background: #C7C2AE;
+  border: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-family: "Lato";
+  margin-top: 55px;
+  height: 30px;
+  width: 120px;
+   border-radius: 8px;
+  }
+
+.spa button:hover {
+  background: transparent;
+  color: #C7C2AE;
+}
+ .spa button:hover:before,.spa button:hover:after {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+
+.spa button:before, .spa button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 0px;
+  height: 3px;
+  background: #C7C2AE;
+  transition: all 0.2s ease;
+}
+
+.spa button:after {
+  top: inherit;
+  left: inherit;
+  bottom: 0;
+  right: 0;
+}
+
+.actividad{
+	display: flex;
+	flex-flow: column;
+	font-family: 'Tektur', cursive;
+	margin: 30px 0px 0px 0px;
+	width: 85%;
+	margin: 0 auto;
+	
+}
+.actividad h1{
+	color: #BAAA7C;
+}
+
+.actividad ul{
+	list-style: none;
+	background-color: #484949;
+	border-radius: 5px;
+	padding: 10px 0px 10px 20px;
+	margin-top: 40px;
+	border-style: outset;
+	border-color: black;
+	overflow: auto;
+	height: 250px;
+}
+
+.actividad ul li{
+	color: white;
+	margin: 10px;
+}
