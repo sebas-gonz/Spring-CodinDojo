@@ -14,6 +14,7 @@
 	href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Tektur&display=swap"
 	rel="stylesheet">
 	<script src="/js/script.js"></script>
+	<link rel="shortcut icon" href="images/scaredy.png">
 	
 </head>
 <body>

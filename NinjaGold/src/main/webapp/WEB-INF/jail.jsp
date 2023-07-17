@@ -11,6 +11,7 @@
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/jail.css">
 <script src="/js/boton.js"></script>
+<link rel="shortcut icon" href="images/scaredy.png">
 </head>
 <body>
 	<main class="contenedor">
