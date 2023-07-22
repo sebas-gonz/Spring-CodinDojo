@@ -1,0 +1,45 @@
+@charset "ISO-8859-1";
+
+.nav{
+	display: flex;
+	justify-content: end;
+	padding: 40px;
+}
+
+.nav form{
+	margin-right: 60px;
+	
+}
+.nav a{
+	font-size: 25px;
+}
+
+.nav input{
+	font-size: 25px;
+}
+
+.nav input{
+	align-self: center;
+	background: none;
+	border: none;
+	text-decoration: underline;
+	color: rgb(85, 36, 139);
+}
+.editar{
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+.button{
+	display: flex;
+	flex-flow: wrap;
+	justify-content: end;
+}
+
+form{
+	font-size: 25px;
+}
+form input{
+	font-size: 25px;
+}

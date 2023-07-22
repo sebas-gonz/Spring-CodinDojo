@@ -1,0 +1,53 @@
+@charset "ISO-8859-1";
+
+.tabla{
+	display: flex;
+	justify-content: center;
+	height: 250px;
+	}
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 60%;
+	
+}
+table form{
+	display: flex;
+	justify-content: space-around;
+}
+table input{
+	align-self: center;
+	background: none;
+	border: none;
+	text-decoration: underline;
+	color: rgb(85, 36, 139);
+}
+td, th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.createLeng{
+	display: flex;
+	flex-flow: column wrap;
+	text-align: center;
+	align-content: center;
+	margin-top: 20px;
+}
+.crear{
+	width: 70px;
+	    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: end;
+}
+.createLeng form{
+	height: 100px;
+	font-size: 20px;
+}
+.crear input{
+	font-size: 16px;
+}

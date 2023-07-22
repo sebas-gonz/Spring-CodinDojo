@@ -1,0 +1,29 @@
+@charset "ISO-8859-1";
+
+
+.dash{
+	display: flex;
+	justify-content: end;
+	font-size: 25px;
+	margin-top: 20px;
+	margin-right: 40px;
+
+}
+
+p{
+	margin: 40px;
+	font-size: 20px;
+}
+.edit {
+	margin: 40px;
+	font-size: 20px;
+}
+
+form{
+	display: flex;
+	margin: 40px 0px 0px 40px;
+	font-size: 20px;
+}
+form input{
+	font-size: 20px;
+}
