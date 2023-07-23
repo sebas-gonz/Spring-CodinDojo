@@ -1,0 +1,38 @@
+@charset "ISO-8859-1";
+
+header{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: end;
+	padding: 30px;
+	
+}
+header a{
+	margin-right: 20px;
+	font-size: 23px;
+}
+main{
+	display: flex;
+	flex-flow: wrap;
+	margin: 0 auto;
+	width: 30%;
+	margin-top: 40px;
+	
+}
+td, th{
+	padding: 10px;
+}
+main table{
+	font-size: 25px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.delete{
+	background:none;
+	border: none;
+	text-decoration: underline;
+	color: #551a8b;
+	margin: 0px 0px 0px 0px;
+	font-size: 20px;
+	cursor: pointer;
+}

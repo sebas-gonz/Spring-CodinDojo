@@ -1,0 +1,45 @@
+@charset "ISO-8859-1";
+
+header{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: end;
+	padding: 30px;
+	
+}
+header a{
+	margin-right: 20px;
+	font-size: 23px;
+}
+
+main{
+	display: flex;
+	flex-flow: wrap;
+	margin: 0 auto;
+	width: 70%;
+	margin-top: 40px;
+	
+}
+main form{
+	display: flex;
+	flex-flow: column wrap;
+}
+
+
+td, th{
+	padding: 8px;
+}
+main p{
+	display: flex;
+	flex-flow: wrap;
+	justify-content: flex-end;
+}
+main table{
+	font-size: 25px;
+}
+.input{
+	height: 25px;
+}
+.submit{
+	font-size: 25px;
+}

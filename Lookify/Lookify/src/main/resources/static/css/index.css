@@ -1,0 +1,21 @@
+@charset "ISO-8859-1";
+
+#titulo{
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+}
+#titulo h1{
+	font-size: 50px;
+}
+
+#link{
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+#link a{
+	font-size: 30px;
+}
