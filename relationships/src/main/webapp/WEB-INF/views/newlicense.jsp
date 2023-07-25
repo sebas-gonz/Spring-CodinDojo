@@ -27,12 +27,12 @@
 						</select>
 				</div>
 				<div>
-					<form:label path="state" for="firstName">State: </form:label>
+					<form:label path="state" for="state">State: </form:label>
 					<form:input type="text" path="state" />
 					<form:errors path="state" cssClass="error" />
 				</div>
 				<div>
-					<form:label path="expirationDate" for="lastName">Expiration Date: </form:label>
+					<form:label path="expirationDate" for="expirationDate">Expiration Date: </form:label>
 					<form:input type="date" path="expirationDate" id="expirationDate" name="expirationDate"/>
 					<form:errors path="expirationDate" />
 				</div>

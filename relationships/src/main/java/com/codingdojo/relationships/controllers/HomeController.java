@@ -21,8 +21,6 @@ import jakarta.validation.Valid;
 @Controller
 public class HomeController {
 
-	private int licenseCounter = 0;
-
 	@Autowired
 	private PersonService personService;
 
@@ -59,7 +57,7 @@ public class HomeController {
 		}
 		personService.createPerson(person);
 
-		return "redirect:/persons/new";
+		return "redirect:/licenses/new";
 
 	}
 
@@ -73,25 +71,23 @@ public class HomeController {
 	@PostMapping("/licenses")
 	public String createLicense(@Valid @ModelAttribute("license") License license, BindingResult result) {
 
-		int number;
 
 		if (result.hasErrors()) {
 			return "views/newlicense.jsp";
 		}
 
-			number = licenseCounter + 1;
 
-			String licenseNumber = String.format("%06d", number);
+			String licenseNumber = String.format("%06d", license.getPerson().getId());
 
 			license.setNumber(licenseNumber);
 
 			licenseService.createLicense(license);
 
-			licenseCounter++;
 
-			return "redirect:/licenses/new";
+			return "redirect:/";
 
 	}
+	
 
 	
 

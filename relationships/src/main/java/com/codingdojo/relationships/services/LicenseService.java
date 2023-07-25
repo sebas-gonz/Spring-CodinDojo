@@ -31,5 +31,7 @@ public class LicenseService {
 	public License getLicenseByPersonById(Long id) {
 		return licenseRepository.getLicenseByPersonId(id);
 		}
+	
+	
 
 }
