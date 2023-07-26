@@ -23,15 +23,15 @@
 			<table>
 				<tr>
 					<th>License Number: </th>
-					<td>${license.number}</td>
+					<td>${person.license.number}</td>
 				</tr>
 				<tr>
 					<th>State: </th>
-					<td>${license.state}</td>
+					<td>${person.license.state}</td>
 				</tr>
 				<tr>
 					<th>Expiration Date: </th>
-					<td> <fmt:formatDate value="${license.expirationDate}" pattern="yyyy-MM-dd"/></td>
+					<td> <fmt:formatDate value="${person.license.expirationDate}" pattern="yyyy-MM-dd"/></td>
 				</tr>
 			</table>
 		</fieldset>

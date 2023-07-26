@@ -14,13 +14,12 @@
 	<a href="http://localhost:8080/licenses/new">New License</a>
 
 	<form accept-charset="UTF-8" action="/" method="post">
-		<label for="person">Person: </label>
-		<select name="person" id="person">
+		<label for="person">Person: </label> <select name="person" id="person">
 			<c:forEach items="${allperson}" var="allperson">
-				<option value="${allperson.id}">${allperson.firstName} ${allperson.lastName}</option>
+				<option value="${allperson.id}">${allperson.firstName}
+					${allperson.lastName}</option>
 			</c:forEach>
-		</select>
-		<input type="submit" class="submit" value="Search License" />
+		</select> <input type="submit" class="submit" value="Search License" />
 	</form>
 
 </body>
