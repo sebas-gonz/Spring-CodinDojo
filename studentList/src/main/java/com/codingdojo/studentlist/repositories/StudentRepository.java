@@ -10,4 +10,12 @@ public interface StudentRepository extends CrudRepository<Student,Long> {
 	List <Student> findAll();
 	
 	List <Student> findStudentByContactIsNull();
+	
+	List <Student> findStudentByDormitoryIsNull();
+	
+	Long findDormitoryIdById(Long id);
+	
+	Student findStudentById(Long id);
+	
+	
 }

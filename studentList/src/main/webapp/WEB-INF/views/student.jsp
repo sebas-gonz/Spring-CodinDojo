@@ -13,6 +13,7 @@
 		<h1>All Students</h1>
 		<a class="dash" href="http://localhost:8080/student/new">Register Student</a>
 		<a class="dash" href="http://localhost:8080/contact/new">Add Contact</a>
+		<a class="dash" href="http://localhost:8080/">Home</a>
 	</header>
 	<main>
 		<table>

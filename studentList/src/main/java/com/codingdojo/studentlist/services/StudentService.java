@@ -28,5 +28,14 @@ public class StudentService {
 		return studentRepository.findAll();
 	}
 	
+	public List<Student> studentsDormitoryNull(){
+		return studentRepository.findStudentByDormitoryIsNull();
+	}
+	
+	public Long findDormitoryByStudentId(Long id) {
+		
+		return studentRepository.findDormitoryIdById(id);
+	}
+	
 
 }

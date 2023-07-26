@@ -4,11 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.codingdojo.studentlist.models.Student;
+import com.codingdojo.studentlist.services.DormitoryService;
 import com.codingdojo.studentlist.services.StudentService;
 
 import jakarta.validation.Valid;
@@ -18,6 +21,9 @@ public class StudentController {
 
 	@Autowired
 	private StudentService studentService;
+	
+	@Autowired
+	private DormitoryService dormitoryService;
 
 
 	@GetMapping("/student/new")
@@ -43,5 +49,13 @@ public class StudentController {
 		
 		return "views/student.jsp";
 	}
+	
+	@DeleteMapping("/student/{dormitoryId}/{id}")
+	public String destroy(@PathVariable("dormitoryId") Long dormitoryId,@PathVariable("id")Long id) {
+		dormitoryService.deleteStudent(dormitoryId, id);
+
+		return "redirect:/dorms/"+ dormitoryId;
+	}
+
 	
 }

@@ -1,5 +1,4 @@
 @charset "ISO-8859-1";
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -16,10 +15,9 @@ body {
   header a {
     color: #fff;
     text-decoration: none;
-    margin: 20px;
   }
 
-  main {
+main {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;

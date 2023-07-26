@@ -9,6 +9,8 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
@@ -34,6 +36,10 @@ public class Student {
 	 
 	 @OneToOne(mappedBy="student", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	    private Contact contact;
+	 
+	 @ManyToOne(fetch = FetchType.LAZY)
+	    @JoinColumn(name="dormitory_id")
+	    private Dormitory dormitory;
 
 	public Student() {
 	}
@@ -44,6 +50,27 @@ public class Student {
 		this.lastName = lastName;
 		this.age = age;
 		this.contact = contact;
+	}
+	
+	
+
+
+	public Student(String firstName, String lastName, Long age, Contact contact, Dormitory dormitory) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.contact = contact;
+		this.dormitory = dormitory;
+	}
+
+
+	public Dormitory getDormitory() {
+		return dormitory;
+	}
+
+
+	public void setDormitory(Dormitory dormitory) {
+		this.dormitory = dormitory;
 	}
 
 
