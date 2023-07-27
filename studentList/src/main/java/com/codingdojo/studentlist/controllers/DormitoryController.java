@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.codingdojo.studentlist.models.Dormitory;
+import com.codingdojo.studentlist.models.Student;
 import com.codingdojo.studentlist.services.DormitoryService;
 import com.codingdojo.studentlist.services.StudentService;
 
@@ -54,8 +55,13 @@ public class DormitoryController {
 
 	public String addStudent(@PathVariable("dormitoryId") Long dormitoryId, @RequestParam("student") Long id) {
 
-		dormitoryService.addStudent(dormitoryId, id);
+		Student student = studentService.findStudentById(id);
+		Dormitory dormitory = dormitoryService.findDormitoryById(dormitoryId);
+		
+		student.setDormitory(dormitory);
+		
+		studentService.createStudent(student);
 
-		return "redirect:/dorms/" + dormitoryId;
+		return "redirect:/dorms/" + dormitory.getId();
 	}
 }

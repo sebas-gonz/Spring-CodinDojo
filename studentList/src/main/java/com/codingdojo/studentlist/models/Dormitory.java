@@ -90,13 +90,6 @@ public class Dormitory {
 	public void setStudents(List<Student> students) {
 		this.students = students;
 	}
-	public void addStudent(Student student) {
-        students.add(student);
-        student.setDormitory(this); 
-    }
-	public void removeStudent(Student student) {
-		student.setDormitory(null);
-	}
     
 	
 	

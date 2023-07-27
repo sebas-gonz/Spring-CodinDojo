@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.codingdojo.studentlist.models.Student;
-import com.codingdojo.studentlist.services.DormitoryService;
 import com.codingdojo.studentlist.services.StudentService;
 
 import jakarta.validation.Valid;
@@ -22,8 +21,6 @@ public class StudentController {
 	@Autowired
 	private StudentService studentService;
 	
-	@Autowired
-	private DormitoryService dormitoryService;
 
 
 	@GetMapping("/student/new")
@@ -52,7 +49,11 @@ public class StudentController {
 	
 	@DeleteMapping("/student/{dormitoryId}/{id}")
 	public String destroy(@PathVariable("dormitoryId") Long dormitoryId,@PathVariable("id")Long id) {
-		dormitoryService.deleteStudent(dormitoryId, id);
+		Student student = studentService.findStudentById(id);
+		
+		student.setDormitory(null);
+		
+		studentService.createStudent(student);
 
 		return "redirect:/dorms/"+ dormitoryId;
 	}

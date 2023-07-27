@@ -36,6 +36,8 @@ public class StudentService {
 		
 		return studentRepository.findDormitoryIdById(id);
 	}
-	
+	public Student findStudentById(Long id) {
+		return studentRepository.findStudentById(id);
+	}
 
 }

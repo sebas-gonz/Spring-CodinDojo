@@ -16,6 +16,7 @@ public interface StudentRepository extends CrudRepository<Student,Long> {
 	Long findDormitoryIdById(Long id);
 	
 	Student findStudentById(Long id);
+
 	
 	
 }
