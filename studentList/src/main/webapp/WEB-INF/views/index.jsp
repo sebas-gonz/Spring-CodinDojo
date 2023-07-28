@@ -35,5 +35,16 @@
 		</select> 
 		<input type="submit" class="submit" value="Search Student" />
 	</form>
+	
+	
+	<form accept-charset="UTF-8" action="/classes" method="post">
+		<label for="classes">Clases: </label> 
+		<select name="classes" id="classes">
+			<c:forEach items="${classes}" var="cl">
+				<option value="${cl.id}">${cl.name}</option>
+			</c:forEach>
+		</select> 
+		<input type="submit" class="submit" value="Search Student" />
+	</form>
 </body>
 </html>

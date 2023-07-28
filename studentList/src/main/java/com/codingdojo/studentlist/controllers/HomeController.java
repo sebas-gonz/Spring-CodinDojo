@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.codingdojo.studentlist.services.ClassService;
 import com.codingdojo.studentlist.services.DormitoryService;
 import com.codingdojo.studentlist.services.StudentService;
 
@@ -19,11 +20,15 @@ public class HomeController {
 	@Autowired
 	private StudentService studentService;
 	
+	@Autowired
+	private ClassService classService;
+	
 	
 	@GetMapping("/")
 	public String index(Model model) {
 		model.addAttribute("dormitories", dormitoryService.finAll());
 		model.addAttribute("students", studentService.allStudent());
+		model.addAttribute("classes", classService.allClasses());
 		
 		return "views/index.jsp";
 	}
@@ -38,6 +43,12 @@ public class HomeController {
 	public String students(@RequestParam("student")Long id) {
 		
 		return "redirect:/student/" + id;
+	}
+	
+	@PostMapping("/classes")
+	public String classes(@RequestParam("classes")Long id) {
+		
+		return "redirect:/classes/" + id;
 	}
 	
 

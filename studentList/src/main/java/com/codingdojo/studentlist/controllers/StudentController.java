@@ -73,7 +73,7 @@ public class StudentController {
 		model.addAttribute("student", studentService.findStudentById(id));
 		model.addAttribute("clase", classService.findStudentsNotContain(studentService.findStudentById(id)));
 		
-		return "views/classes_students.jsp";
+		return "views/students_classes.jsp";
 	}
 	
 	@PostMapping("/student/{studentId}/add")

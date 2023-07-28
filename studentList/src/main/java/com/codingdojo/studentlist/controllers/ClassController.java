@@ -42,9 +42,8 @@ public class ClassController {
 	}
 	
 	@GetMapping("/classes/{id}")
-	public String clas(@PathVariable("id")Long id,Model model,
-			@ModelAttribute("class") Class clas) {
-		model.addAttribute("class", classService.findClassById(id));
+	public String clas(@PathVariable("id")Long id,Model model) {
+		model.addAttribute("clases", classService.findClassById(id));
 		
 		return "views/classes_students.jsp";
 	}
