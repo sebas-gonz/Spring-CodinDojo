@@ -1,6 +1,7 @@
 package com.codingdojo.studentlist.models;
 
 import java.util.Date;
+import java.util.List;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -10,6 +11,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.PrePersist;
@@ -40,6 +43,14 @@ public class Student {
 	 @ManyToOne(fetch = FetchType.LAZY)
 	    @JoinColumn(name="dormitory_id")
 	    private Dormitory dormitory;
+	 
+	 @ManyToMany(fetch = FetchType.LAZY)
+	    @JoinTable(
+	        name = "classes_students", 
+	        joinColumns = @JoinColumn(name = "student_id"), 
+	        inverseJoinColumns = @JoinColumn(name = "class_id")
+	    )
+	    private List<Class> clas;
 
 	public Student() {
 	}
@@ -61,6 +72,29 @@ public class Student {
 		this.age = age;
 		this.contact = contact;
 		this.dormitory = dormitory;
+	}
+	
+	
+
+
+	public Student(String firstName, String lastName, Long age, Contact contact, Dormitory dormitory,
+			List<Class> clas) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.contact = contact;
+		this.dormitory = dormitory;
+		this.clas = clas;
+	}
+
+
+	public List<Class> getClas() {
+		return clas;
+	}
+
+
+	public void setClas(List<Class> clas) {
+		this.clas = clas;
 	}
 
 

@@ -14,6 +14,7 @@
 		<a href="student/new">New Student</a>
 		<a href="contact/new">Add Contact</a>
 		<a href="/student">All Students</a>
+		<a href="/classes/new">New Class</a>
 	</header>
 	<form accept-charset="UTF-8" action="/" method="post">
 		<label for="dormitory">Dormitories: </label> 
@@ -23,6 +24,16 @@
 			</c:forEach>
 		</select> 
 		<input type="submit" class="submit" value="Search Dormitory" />
+	</form>
+	
+	<form accept-charset="UTF-8" action="/students" method="post">
+		<label for="student">Students: </label> 
+		<select name="student" id="student">
+			<c:forEach items="${students}" var="student">
+				<option value="${student.id}">${student.firstName} ${student.lastName} </option>
+			</c:forEach>
+		</select> 
+		<input type="submit" class="submit" value="Search Student" />
 	</form>
 </body>
 </html>

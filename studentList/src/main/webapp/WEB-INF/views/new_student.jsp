@@ -9,6 +9,11 @@
 <link rel="stylesheet" type="text/css" href="/css/student.css">
 </head>
 <body>
+	<header>
+		<nav>
+			<a href="http://localhost:8080/">Home</a>
+		</nav>
+	</header>
     <main>
        <form:form accept-charset="UTF-8" action="/student" method="post" modelAttribute="student">
             <fieldset>

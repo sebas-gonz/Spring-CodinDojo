@@ -10,6 +10,11 @@
 <link rel="stylesheet" type="text/css" href="/css/contact.css">
 </head>
 <body>
+	<header>
+		<nav>
+			<a href="http://localhost:8080/">Home</a>
+		</nav>
+	</header>
     <main>
        <form:form accept-charset="UTF-8" action="/contact" method="post" modelAttribute="contact">
             <fieldset>

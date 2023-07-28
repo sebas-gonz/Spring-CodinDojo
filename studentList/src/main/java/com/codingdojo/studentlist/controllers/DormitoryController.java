@@ -53,7 +53,10 @@ public class DormitoryController {
 
 	@PostMapping("/dorms/{dormitoryId}/add")
 
-	public String addStudent(@PathVariable("dormitoryId") Long dormitoryId, @RequestParam("student") Long id) {
+	public String addStudent(@PathVariable("dormitoryId") Long dormitoryId, @RequestParam(name = "student", required = false) Long id) {
+		if (id == null) {
+	        return "redirect:/products/" + dormitoryId;
+	    }
 
 		Student student = studentService.findStudentById(id);
 		Dormitory dormitory = dormitoryService.findDormitoryById(dormitoryId);

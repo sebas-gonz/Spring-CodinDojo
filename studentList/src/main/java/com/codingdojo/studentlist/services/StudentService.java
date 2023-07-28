@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.codingdojo.studentlist.models.Student;
 import com.codingdojo.studentlist.repositories.StudentRepository;
 
+import com.codingdojo.studentlist.models.Class;
 @Service
 public class StudentService {
 	
@@ -39,5 +40,10 @@ public class StudentService {
 	public Student findStudentById(Long id) {
 		return studentRepository.findStudentById(id);
 	}
-
+	
+	public List<Student> findClassNotContains(Class clas){
+		
+		return studentRepository.findByClasNotContains(clas);
+		
+	}
 }

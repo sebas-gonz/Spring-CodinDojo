@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.codingdojo.studentlist.services.DormitoryService;
+import com.codingdojo.studentlist.services.StudentService;
 
 @Controller
 public class HomeController {
@@ -15,10 +16,14 @@ public class HomeController {
 	@Autowired
 	private DormitoryService dormitoryService;
 	
+	@Autowired
+	private StudentService studentService;
+	
 	
 	@GetMapping("/")
 	public String index(Model model) {
 		model.addAttribute("dormitories", dormitoryService.finAll());
+		model.addAttribute("students", studentService.allStudent());
 		
 		return "views/index.jsp";
 	}
@@ -29,7 +34,11 @@ public class HomeController {
 		return "redirect:/dorms/"+ id;
 	}
 	
-	
+	@PostMapping("/students")
+	public String students(@RequestParam("student")Long id) {
+		
+		return "redirect:/student/" + id;
+	}
 	
 
 }

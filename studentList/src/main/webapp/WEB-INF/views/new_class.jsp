@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Register Dormitory</title>
-<link rel="stylesheet" type="text/css" href="/css/new_dorm.css">
+<title>New Class</title>
+<link rel="stylesheet" type="text/css" href="/css/new_class.css">
 </head>
 <body>
 	<header>
@@ -15,11 +15,11 @@
 		</nav>
 	</header>
 	<main>
-       <form:form accept-charset="UTF-8" action="/dorms/new" method="post" modelAttribute="dormitory">
+       <form:form accept-charset="UTF-8" action="/classes/new" method="post" modelAttribute="class">
             <fieldset>
-                <legend>Register</legend>
+                <legend>Register Classes</legend>
                 <div>
-                    <form:label path="name" for="name">Name:</form:label>
+                    <form:label path="name" for="name">Name: </form:label>
                     <form:input type="text" path="name" />
                     <form:errors path="name" cssClass="error" />
                 </div>
