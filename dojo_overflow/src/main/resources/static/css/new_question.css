@@ -1,0 +1,73 @@
+@charset "ISO-8859-1";
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f0f0f0;
+}
+
+header {
+	background-color: #007bff;
+	padding: 10px;
+	text-align: center;
+	color: #fff;
+}
+
+main {
+	padding: 20px;
+}
+
+fieldset {
+	width: 40%;
+	margin: auto;
+	padding: 30px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+}
+
+legend {
+	font-weight: bold;
+}
+
+form label,
+form input,
+form p {
+	display: block;
+	margin: 10px 0;
+}
+
+.error {
+	color: red;
+}
+
+.submit {
+	padding: 10px 15px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+#tags {
+	width: 40%;
+	padding: 5px;
+}
+
+/* Optional: Center the form on the page */
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+#question {
+	width: 100%;
+	padding: 10px;
+}
+
+form input{
+	width: 100%;
+}
