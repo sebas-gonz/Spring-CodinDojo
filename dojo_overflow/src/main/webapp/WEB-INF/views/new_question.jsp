@@ -23,9 +23,7 @@
 				
                         <label for="tags">Tags: </label>
                         <input type="text" name="tags" id="tags" />
-                  
-                  
-				
+
 				<p>
 					<input type="submit" class="submit" value="Create" />
 				</p>

@@ -42,7 +42,7 @@ public class QuestionController {
 
 	@PostMapping("/question/new")
 	public String createQuestion(@Valid @ModelAttribute("quest") Question question, BindingResult result,
-			@RequestParam("tags") String tags, Model model) {
+			@RequestParam("tags") String tags) {
 
 		List<String> tagsQuest = Arrays.asList((tags.split("\\s*,\\s*")));
 
@@ -54,7 +54,6 @@ public class QuestionController {
 			return "views/new_question.jsp";
 		}
 
-		model.addAttribute("error", false);
 		List<Tag> tagsList = new ArrayList<>();
 		for (String tagSubject : tagsQuest) {
 			Tag existingTag = tagService.findBySubject(tagSubject);
