@@ -18,7 +18,7 @@ public class DojoController {
 	@Autowired
 	private DojoService dojoService;
 	
-	
+
 	@GetMapping("/dojos/new")
 	
 	public String createDojo(@ModelAttribute("dojo") Dojo dojo) {
@@ -36,5 +36,5 @@ public class DojoController {
 		
 		return "redirect:/ninjas/new";
 	}
-
+	
 }

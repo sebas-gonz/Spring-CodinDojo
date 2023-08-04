@@ -11,7 +11,7 @@
 <body>
 	<header>
 		<nav>
-			<a href="http://localhost:8080/">index</a>
+			<a href="http://localhost:8080/${dojo_ninjas.id}">index</a>
 		</nav>
 	</header>
 	<main>

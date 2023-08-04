@@ -6,10 +6,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Register Dojo</title>
-<link rel="stylesheet" type="text/css" href="/css/new_dojo.css">
+<link rel="stylesheet" type="text/css" href="">
 </head>
 <body>
-	    <main>
+	  <main>
        <form:form accept-charset="UTF-8" action="/dojos/new" method="post" modelAttribute="dojo">
             <fieldset>
                 <legend>Register</legend>

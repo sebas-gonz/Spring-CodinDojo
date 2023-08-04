@@ -11,7 +11,7 @@
 </head>
 <body>
 	<main>
-		<form:form accept-charset="UTF-8" action="/ninjas/new" method="post" modelAttribute="ninja">
+		<form:form accept-charset="UTF-8" action="/ninjas/new/add" method="post" modelAttribute="ninja">
 			<fieldset>
 				<legend>Personal Information</legend>
 				<div>

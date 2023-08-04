@@ -37,7 +37,6 @@ public class Dojo {
     }
 
 	public Dojo( String name, List<Ninja> ninjas) {
-		super();
 		this.name = name;
 		this.ninjas = ninjas;
 	}

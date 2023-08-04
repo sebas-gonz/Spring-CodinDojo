@@ -30,15 +30,15 @@ public class NinjaController {
 		return "views/ninja_create.jsp";
 	}
 	
-	@PostMapping("/ninjas/new")
-	public String newNinja(@Valid @ModelAttribute("ninja")Ninja ninja,BindingResult result) {
+	@PostMapping("/ninjas/new/add")
+	public String newNinja(@Valid @ModelAttribute("ninja")Ninja ninja,BindingResult result,Model model) {
 		if(result.hasErrors()) {
+			model.addAttribute("dojo", dojoService.allDojos());
 			return "views/ninja_create.jsp";
 		}
-		
 		ninjaService.createNinja(ninja);
 		
-		return "redirect:/";
+		return "redirect:/"+ ninja.getDojo().getId();
 	}
 	
 	
