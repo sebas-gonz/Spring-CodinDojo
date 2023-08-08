@@ -33,4 +33,17 @@ public class UserService {
 			return null;
 		}
 	}
+	
+	public boolean authenticateUser(String email, String password) {
+		User user = userRepo.findByEmail(email);
+		if(user == null) {
+			return false;
+		} else {
+			if(BCrypt.checkpw(password, user.getPassword())) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
 }

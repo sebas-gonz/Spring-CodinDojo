@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.codingdojo.authentication.models.User;
 import com.codingdojo.authentication.services.UserService;
+import com.codingdojo.authentication.validations.UserValidator;
 
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
@@ -18,7 +19,10 @@ import jakarta.validation.Valid;
 @Controller
 public class UserController {
 	@Autowired
-	UserService userService;
+	private UserService userService;
+	
+	@Autowired
+	private UserValidator userValidator;
 	
 	@GetMapping("/")
 	public String registerForm(@ModelAttribute("user")User user) {
@@ -32,7 +36,8 @@ public class UserController {
 	}
 	
 	@PostMapping("/")
-	public String registerUser(@Valid @ModelAttribute("user")User user,BindingResult result,HttpSession session) {
+	public String registerUser(Model model,@Valid @ModelAttribute("user")User user,BindingResult result,HttpSession session) {
+		userValidator.validate(user, result);
 		if(result.hasErrors()) {
 			return "views/registrationPage.jsp";
 		}else {
@@ -43,13 +48,14 @@ public class UserController {
 	}
 	@PostMapping("/login")
 	public String loginUser(@RequestParam("email")String email,@RequestParam("password")String password,Model model,HttpSession session) {
-		if(userService.findUserByEmail(email) != null) {
-			session.setAttribute("user", userService.findUserByEmail(email).getId());
-			
+		boolean isAuthenticated = userService.authenticateUser(email, password);
+		if(isAuthenticated ) {
+			session.setAttribute("userId", userService.findUserByEmail(email).getId());
 			return "redirect:/home";
 		} else {
+			model.addAttribute("error", "Sesion invalida reintentelo denuevo");
 			return "views/login.jsp";
-		}	
+		}
 	}
 	
 	@GetMapping("/home")

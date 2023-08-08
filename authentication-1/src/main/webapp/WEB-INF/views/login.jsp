@@ -10,6 +10,7 @@
 </head>
 <body>
     <h1>Login</h1>
+    <p>${error}</p>
     <form method="post" action="/login">
         <p>
             <label for="email">Email</label>
