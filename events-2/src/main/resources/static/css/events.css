@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+.eliminar{
+	background:none;
+	border: none;
+	text-decoration: underline;
+	color: #0d6efd;
+	margin: 0px 0px 0px 0px;
+	cursor: pointer;
+}
+
+section{
+	height: 250px;
+	overflow: auto;
+}
